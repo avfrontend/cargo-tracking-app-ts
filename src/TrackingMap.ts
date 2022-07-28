@@ -1,14 +1,14 @@
-interface Entity {
+export interface Entity {
   location: {
     lat: number;
     lon: number;
   };
   popupText(): string;
+  weight: number;
 }
 
 export class TrackingMap {
   private googleMap: google.maps.Map;
-
   constructor(elementId: string) {
     this.googleMap = new google.maps.Map(document.getElementById(elementId), {
       zoom: 2,

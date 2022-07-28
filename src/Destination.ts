@@ -1,11 +1,13 @@
 import { faker } from "@faker-js/faker";
+import { Entity } from "./TrackingMap";
 
-export class Destination {
+export class Destination implements Entity {
   receiver: string;
   location: {
     lat: number;
     lon: number;
   };
+  weight: number;
 
   constructor() {
     this.receiver = faker.name.firstName();
